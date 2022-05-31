@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% block title%}Story!{% endblock %}
+{% block content %}
+<h2>A Story For You...</h2>
+<div class="story">
+  <p>{{ story }}</p>
+</div>
+<form class="start-over-form" action="/"> 
+  <button class="start-over">Make Another One</button>
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

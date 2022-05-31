@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%}Home{% endblock %}
+{% block content %}
+<h1>Welcome To MadLibs</h1>
+<h2>pick a story</h2>
+
+<form class="sendTemplate" action="/form">
+{% for story in stories %}
+<input type="radio" 
+  id="{{stories.index(story)}}" 
+  name="id"
+  value="{{stories.index(story)}}">
+<label for="{{stories[stories.index(story)]}}">{{story.getTemplate()}}</label><br>
+{% endfor %}
+<button class="home-submit">Submit</button>
+</form>
+{% endblock %}
+

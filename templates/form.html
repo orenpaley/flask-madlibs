@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%}Form{% endblock %}
+{% block content %}
+<h1>Welcome To MadLibs</h1>
+  <form action="/story">
+    <label for="storyId">StoryId</label>
+    <input type="text" name="storyId" value="{{storyId}}" readonly>
+
+    {% for i in range(0, len) %}
+    <label for={{words[i]}}>{{words[i]}}</label>
+    <input type="text" label ={{words[i]}} placeholder = {{ words[i] }} name={{words[i]}}>
+    {% endfor %}
+    <button class="submit">Submit</button>
+  </form>
+{% endblock %}
+
